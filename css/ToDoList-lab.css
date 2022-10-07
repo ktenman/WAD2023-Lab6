@@ -157,3 +157,15 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
+
+button {
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
+
+
+/* button:focus {
+    border: none;
+    outline: none;
+} */
