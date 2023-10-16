@@ -11,9 +11,8 @@ function createButton() {
     return buttonElement;
 }
 
-for (let i = 0; i < tasks.length; i++) {
-    let buttonElement = createButton();
-    tasks[i].appendChild(buttonElement);
+for (const task of tasks) {
+    task.appendChild(createButton());
 }
 
 const list = document.querySelector("ul");
