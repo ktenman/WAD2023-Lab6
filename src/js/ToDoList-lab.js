@@ -12,3 +12,11 @@ for (let i = 0; i < tasks.length; i++) {
     tasks[i].appendChild(buttonElement);
 }
 
+var list = document.querySelector("ul");
+
+list.addEventListener("click", function (event) {
+    if (event.target.tagName === "LI") {
+        event.target.classList.toggle("checked")
+    }
+}, false)
+
