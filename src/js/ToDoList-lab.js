@@ -37,3 +37,22 @@ function newTask() {
 
 addDeleteButtonToTasks();
 document.querySelector("ul").addEventListener("click", toggleTaskCompletion, false);
+
+function searchTasks() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const tasks = document.querySelectorAll("li");
+
+    for (const task of tasks) {
+        const taskText = task.textContent.toLowerCase().replace('Delete', '').trim(); // removing 'Delete' as it's part of the button text
+
+        if (taskText.includes(searchInput)) {
+            task.style.display = "";
+        } else {
+            task.style.display = "none";
+        }
+    }
+}
+
+
+document.getElementById("searchInput").addEventListener("keyup", searchTasks);
+
