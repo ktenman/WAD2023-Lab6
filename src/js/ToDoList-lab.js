@@ -5,9 +5,7 @@ function createButton() {
     let textNode = document.createTextNode("Delete");
     buttonElement.appendChild(textNode);
     buttonElement.className = "close";
-    buttonElement.addEventListener("click", function () {
-        this.parentElement.style.display = "none";
-    })
+    buttonElement.addEventListener("click", () => buttonElement.parentElement.style.display = "none");
     return buttonElement;
 }
 
